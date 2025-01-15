@@ -1,0 +1,93 @@
+
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+  }
+  
+  body {
+    margin: 0;
+    display: flex;
+    min-width: 320px;
+    min-height: 100vh;
+  }
+  
+  #app {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .accordion {
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .accordion-item {
+    border: 1px solid #444;
+    margin-bottom: 5px;
+    border-radius: 4px;
+  }
+  
+  .accordion-header {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: #1a1a1a;
+    color: white;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .accordion-header:hover {
+    background: #2a2a2a;
+  }
+  
+  .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: #2a2a2a;
+  }
+  
+  .accordion-content p {
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  .accordion-item.active .accordion-header {
+    background: #333;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      color: #213547;
+      background-color: #ffffff;
+    }
+    
+    .accordion-item {
+      border-color: #ddd;
+    }
+    
+    .accordion-header {
+      background: #f0f0f0;
+      color: #213547;
+    }
+    
+    .accordion-header:hover {
+      background: #e5e5e5;
+    }
+    
+    .accordion-content {
+      background: #f8f8f8;
+    }
+    
+    .accordion-item.active .accordion-header {
+      background: #e0e0e0;
+    }
+  }
